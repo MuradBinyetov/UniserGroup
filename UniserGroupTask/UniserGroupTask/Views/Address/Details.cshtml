@@ -1,0 +1,21 @@
+﻿@model UserViewModel
+
+<table class="table table-striped">
+    <thead>
+        <tr> 
+            <th scope="col">User Name</th>
+            <th scope="col">Address Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var address in Model?.UserDetails?.Addresses)
+        {
+            <tr>
+                <td> @address.ApplicationUser.Name </td>
+                <td> @address.Name </td> 
+            </tr>
+
+        }
+
+    </tbody>
+</table>

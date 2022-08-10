@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniserGroupTask", "UniserGroupTask\UniserGroupTask.csproj", "{C58BC8EF-C46B-4D51-B182-231B37BEAC14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C58BC8EF-C46B-4D51-B182-231B37BEAC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C58BC8EF-C46B-4D51-B182-231B37BEAC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C58BC8EF-C46B-4D51-B182-231B37BEAC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C58BC8EF-C46B-4D51-B182-231B37BEAC14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {903C6D10-E6F3-435F-9A66-361AC280BC47}
+	EndGlobalSection
+EndGlobal

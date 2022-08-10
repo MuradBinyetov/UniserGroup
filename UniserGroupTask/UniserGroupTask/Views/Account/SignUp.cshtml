@@ -1,0 +1,144 @@
+﻿@model UserViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/images/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        select {
+            width: 100%;
+            height: 50px;
+            border-radius: 24px;
+            background-color: #E6E6E6;
+            border: none;
+            padding-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100" style="padding-top:0;">
+
+                <div class="login100-pic js-tilt" data-tilt style="padding-top: 8%;">
+                    <img src="~/images/signUp.jpg" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form" asp-action="SignUp" asp-controller="Account" method="post" style="margin-top: 30px;">
+
+
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="Username" class="input100" type="text" placeholder="User Name">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="Name" class="input100" type="text" placeholder="Name">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="Surname" class="input100" type="text" placeholder="Surname">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="Email" class="input100" type="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-mail-forward" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="Password" class="input100" type="password" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="wrap-input100 validate-input">
+                        <input asp-for="UserAddresses[0]"  class="input100"   placeholder="Address">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div style="text-align: center; font-size: 30px;" class="plusAddress"> 
+                       +
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+        var fileCount = 1;
+        $('.plusAddress').on('click', function () {
+           
+            var addressVm = `UserAddresses[${fileCount}]`; 
+
+            $(`<div class="wrap-input100 validate-input">
+                        <input name="${addressVm}" class="input100" placeholder="Address">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>`).insertBefore(".container-login100-form-btn");
+            fileCount++;
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="~/js/main.js"></script>
+
+</body>
+</html> 

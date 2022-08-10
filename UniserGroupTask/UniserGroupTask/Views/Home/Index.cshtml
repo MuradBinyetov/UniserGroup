@@ -1,0 +1,30 @@
+﻿@model UserViewModel
+
+    <div class="logout_block" style="">
+        <form asp-controller="Account" asp-action="Logout" method="post">
+            <a style="top: 0; position: relative" href="#" onclick="$(this).parents('form').submit()">
+                <h4 class="logout_link" style="">Log Out</h4>
+            </a>
+        </form>
+    </div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model?.AllUsers)
+        {
+            <tr>
+                <td><a asp-controller="Address" asp-action="Details" asp-route-id="@user.Id"> @user.UserName</a></td>
+                <td><a asp-controller="Address" asp-action="Details" asp-route-id="@user.Id"> @user.Name</a></td>
+                <td><a asp-controller="Address" asp-action="Details" asp-route-id="@user.Id"> @user.Surname</a></td>
+            </tr> 
+        }
+
+    </tbody>
+</table>
